@@ -1,10 +1,23 @@
 package com.prem.junit;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class MyBeforeAfterTest {
+	
+	@BeforeAll
+	static void beforeAll() {
+		System.out.println("BeforeAll");
+	}
+	
+	@AfterAll
+	static void afterAll() {
+		System.out.println("AfterAll");
+
+	}
 	
 	@BeforeEach
 	void beforeEach() {
